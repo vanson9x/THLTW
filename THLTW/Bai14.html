@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bai 14</title>
+	<meta charset="utf-8" />
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #mess{
+            text-align:center;
+        }
+        tfoot tr td:last-child {
+            display:flex;
+            justify-content:flex-end;
+        }
+        tfoot tr td:last-child button{
+            padding: .2em 1em;
+        }
+        tfoot tr td:last-child button:last-child {
+            margin-left: 1em;
+        }
+
+        table {
+            padding: 3em;
+            margin: 0 auto;
+            margin-top: 5em;
+            border: solid 1px #000000;
+        }
+    </style>
+    <script>
+        console.log(roundToTow(17.7687873));
+        function funcSubmit() {
+            var chieucao = document.getElementById('chieucao').value;
+            var cannang = document.getElementById('cannang').value;
+            var number = cannang / Math.pow(chieucao, 2);
+            //var a = Math.round(number * 100) / 100;
+            //console.log(a);
+            number = parseFloat(number).toFixed(1);
+            //var thapphan = Math.round(parseFloat((number - parseInt(number))).toFixed(2) * 10);
+            //number = parseInt(number) + (thapphan * 0.1);
+            document.getElementById('mess').innerHTML = 'BMI của bạn là ' + number + ', bạn ở mức ' + '<i>' + funcCompare(number) + '</i>';
+            return false;
+        }
+
+        function roundToTow(num) {
+            return +(Math.round(num + "e+1") + "e-1");
+        }
+
+        function funcCompare(number) {
+            switch (true) {
+                case number < 18.5:
+                    return 'Dưới chuẩn';
+                case number >= 18.5 && number < 25: 
+                    return 'Chuẩn';
+                case number >= 25 && number < 30:
+                    return 'Thừa cân';
+                case number >= 30 && number <= 40:
+                    return 'Béo, cần giảm cân';
+                case number > 40:
+                    return 'Rất béo, cần giảm cân ngay';
+                default: return 'Chưa có số liệu';
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="/" method="post" onsubmit="return funcSubmit()">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Chiều cao</td>
+                    <td><input id="chieucao" type="text" /></td>
+                    <td>m</td>
+                </tr>
+                <tr>
+                    <td>Cân nặng</td>
+                    <td><input id="cannang" type="text" /></td>
+                    <td>kg</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p id="mess"></p></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Thực hiện</button>
+                        <button type="reset">Hủy</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>

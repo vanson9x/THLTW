@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Bài 13</h1>
+    <script>
+        (function showPrompt() {
+            var src = prompt('Nhập nội dung vào ô input phía dưới.');
+            if (src) {
+                var arr = src.split(' ');
+                var result = '';
+                arr.forEach(function (word) {
+                    if (word.length > result.length) result = word;
+                });
+                alert('Ký tự dài nhất vừa nhập là: ' + result);
+                if (confirm('Bạn có muốn nhập lại ?')) showPrompt();
+            }
+        })();
+    </script>
+</body>
+</html>
