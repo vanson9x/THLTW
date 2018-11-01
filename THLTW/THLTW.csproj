@@ -202,6 +202,10 @@
     <Content Include="Bai14.html" />
     <Content Include="Bai15.aspx" />
     <Content Include="Bai15.html" />
+    <Content Include="Bai20.aspx" />
+    <Content Include="Bai22-Page1.aspx" />
+    <Content Include="Bai22-Page2.aspx" />
+    <Content Include="Bai22-Page3.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -390,6 +394,34 @@
     </Compile>
     <Compile Include="Bai15.aspx.designer.cs">
       <DependentUpon>Bai15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bai20.aspx.cs">
+      <DependentUpon>Bai20.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bai20.aspx.designer.cs">
+      <DependentUpon>Bai20.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bai22-Page1.aspx.cs">
+      <DependentUpon>Bai22-Page1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bai22-Page1.aspx.designer.cs">
+      <DependentUpon>Bai22-Page1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bai22-Page2.aspx.cs">
+      <DependentUpon>Bai22-Page2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bai22-Page2.aspx.designer.cs">
+      <DependentUpon>Bai22-Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bai22-Page3.aspx.cs">
+      <DependentUpon>Bai22-Page3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bai22-Page3.aspx.designer.cs">
+      <DependentUpon>Bai22-Page3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
